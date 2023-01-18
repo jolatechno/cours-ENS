@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\begin{document}
+
+\section{Champs}
+
+$$\vec{E} = i\sum_{k,\lambda} \omega_k \vec{\epsilon}_{k,\lambda}\left(A_{k,\lambda} e^{i(\vec{k}.\vec{r}-\omega_k t)}-A^*_{k,\lambda}e^{-i(\vec{k}.\vec{r}-\omega_k t)}\right)$$
+
+$$\vec{B} = i\sum_{k,\lambda} \vec{k} \times \vec{\epsilon}_{k,\lambda}\left(A_{k,\lambda}e^{i(\vec{k}.\vec{r}-\omega_k t)}-A^*_{k,\lambda}e^{-i(\vec{k}.\vec{r}-\omega_k t)}\right)$$
+
+\paragraph{Quantification : } $A_{k,\lambda}e^{-i\omega t} \equiv \alpha_{k,\lambda} + i\beta_{k,\lambda} $
+
+\section{Pour un oscillateur harmonique on a :}
+
+\subsection{Opérateurs de quadratures}
+
+$$ U_{k,\lambda} \equiv 2\sqrt{\frac{\epsilon_0 V \omega_k}{\hbar}}\alpha_{k,\lambda} \qquad V_{k,\lambda} \equiv 2\sqrt{\frac{\epsilon_0 V \omega_k}{\hbar}}\beta_{k,\lambda}$$
+
+$$\hat{a}_{k,\lambda} = \frac{\hat{U}_{k,\lambda}+i\hat{V}_{k,\lambda}}{\sqrt{2}}\qquad \hat{a}_{k,\lambda}^{\dagger} = \frac{\hat{U}_{k,\lambda}-i\hat{V}_{k,\lambda}}{\sqrt{2}}\qquad [\hat{a}_{k,\lambda},\hat{a}_{k,\lambda}^{\dagger}] =1$$
+
+$$\hat{H}=\sum_{k,\lambda}\hbar\omega_k(\hat{a}_{k,\lambda}^{\dagger}\hat{a}_{k,\lambda} +1/2)\qquad \mathcal{E}_{k,\lambda} =\hbar\omega_k (n+1/2)$$
+
+\subsection{Pour les Opérateurs champs :}
+
+$$A_{k,\lambda}e^{-i\omega t}\rightarrow \hat{A}_{k,\lambda}= \sqrt{\frac{\hbar}{2\epsilon_0V\omega_k}}\hat{a}_{k,\lambda}(t) $$
+
+$$\hat{\vec{A}}(\vec{r},t)=\sqrt{\frac{\hbar}{2\epsilon_0V}}\sum_{k,\lambda}\frac{1}{\sqrt{\omega_k}}\vec{\epsilon}_{k,\lambda}\left(e^{i\vec{k}.\vec{r}}\hat{a}_{k,\lambda}+e^{-i\vec{k}.\vec{r}}\hat{a}^{\dagger}_{k,\lambda}\right)$$
+
+$$\hat{\vec{E}}(\vec{r},t)=i\sqrt{\frac{\hbar}{2\epsilon_0V}}\sum_{k,\lambda}
+\sqrt{\omega_k}\vec{\epsilon}_{k,\lambda}\left(e^{i\vec{k}.\vec{r}}\hat{a}_{k,\lambda}-e^{-i\vec{k}.\vec{r}}\hat{a}^{\dagger}_{k,\lambda}\right)$$
+
+$$\hat{\vec{B}}(\vec{r},t)=i\sqrt{\frac{\hbar}{2\epsilon_0V}}\sum_{k,\lambda}\frac{\vec{k}\times\vec{\epsilon}_{k,\lambda}}{\sqrt{\omega_k}}\left(e^{i\vec{k}.\vec{r}}\hat{a}_{k,\lambda}-e^{-i\vec{k}.\vec{r}}\hat{a}^{\dagger}_{k,\lambda}\right)$$
+
+\section{Etats Quantiques}
+
+\paragraph{Vide :} $\langle0\vert\hat{\vec{E}}\vert0\rangle =0 \qquad \langle0\vert\hat{U}\vert0\rangle =\langle0\vert\hat{V}\vert0\rangle =0 \qquad \langle0\vert\hat{E^2}\vert0\rangle =\frac{\hbar\omega_k}{2\epsilon_0V} \qquad \Delta U \Delta V = 1/2$
+
+\paragraph{Etats de Fock :} $\langle n\vert\hat{\vec{E}}\vert n\rangle =0 \qquad \langle n\vert\hat{E^2}\vert n\rangle =\frac{\hbar\omega_k}{2\epsilon_0V} (2n+1) \qquad \Delta U \Delta V = n +1/2$
+
+\paragraph{Etat cohérent :} $\vert \alpha \rangle = e^{-\frac{\vert\alpha\vert^2}{2}}\sum_n \frac{\alpha^n}{\sqrt{n!}}\vert n \rangle \qquad \alpha = \vert\alpha\vert e^{i\phi} \qquad \hat{a}\vert\alpha\rangle = \alpha\vert\alpha\rangle$
+
+$$\langle U\rangle = \sqrt{2}\vert\alpha\vert\cos\phi \qquad \langle V\rangle = \sqrt{2}\vert\alpha\vert\sin\phi$$
+
+\section{Operateurs matriciels}
+
+\paragraph{Séparatrice : } $\begin{pmatrix}
+    \hat{a}_3 \\
+    \hat{a}_4
+\end{pmatrix} = \begin{pmatrix}
+    \sqrt{T}\:e^{i\epsilon} & i\sqrt{R}\:e^{-i\gamma} \\
+    i\sqrt{R}\:e^{i\gamma} & \sqrt{T}\:e^{i\epsilon}
+\end{pmatrix}\begin{pmatrix}
+    \hat{a}_1 \\
+    \hat{a}_2
+\end{pmatrix}
+$  si 50/50: $M=\frac{1}{\sqrt{2}}\begin{pmatrix}
+    1 & i \\
+    i & 1
+\end{pmatrix}\; ou\; \frac{1}{\sqrt{2}}\begin{pmatrix}
+    1 & 1 \\
+    -1 & 1
+\end{pmatrix}
+$
+
+\paragraph{Miroir :} $M=\begin{pmatrix}
+    0 & 1 \\
+    -1 & 0
+\end{pmatrix}\;ou\;
+\begin{pmatrix}
+    0 & i \\
+    i & 0
+\end{pmatrix}$
+
+\paragraph{$\rightarrow$ Avec perte} $\hat{a}' = \sqrt{\eta}\: \hat{a} + \sqrt{1-\eta} \;\; \Rightarrow \;\; \langle\hat{a}^{\dagger'}\hat{a}'\rangle = \eta\langle\hat{a}^{\dagger}\hat{a}\rangle  \;\; \Rightarrow \;\; (\Delta N')^2 = (\Delta N)^2 +\eta(1-\eta)N$
+
+\subsection{Interaction lumiere-matiere}
+
+\paragraph{moment dipolaire :} $\hat{\vec{d}} = \sum_{n,m} \langle\phi_n\vert\hat{\vec{d}}\vert\phi_m\rangle\vert\phi_n\rangle\langle\phi_m\vert \qquad \vec{d}_{n,n}=0$
+
+
+\paragraph{Semi-classique :} $\hat{W}=-\hat{\vec{d}}.\vec{E} \qquad P_{0\rightarrow N}(t)=\left(\frac{d_{N,0}E_0}{2\hbar}\right)^2 sinc((\Omega_N -\Omega_0 -\omega)t/2)^2$
+
+\paragraph{Si continuum (règle d'or) :} $P \propto \rho(\mathcal{E}=\hbar(\Omega_0 +\omega))d_{0,\hbar(\Omega_0 +\omega)}t =\Gamma t$
+
+\paragraph{Représentation Heinsenberg :} $\hat{M}_H = e^{i\hat{H}t/\hbar}\:\hat{M}_S\:e^{-i\hat{H}t/\hbar}$
+
+\paragraph{Représentation interaction :} $\vert \Psi_I(t)\rangle = e^{i\hat{H}_0t/\hbar}\vert\Psi_S(t)\rangle \qquad \hat{M}_I(t) = e^{i\hat{H}_0t/\hbar}\:\hat{M}_S\:e^{-i\hat{H}_0t/\hbar}$
+
+$$ \hat{H} = \hat{H}_0 + \hat{W} \;\; \Rightarrow \;\; i\hbar\frac{d\vert\Phi_I\rangle}{dt} = \hat{W}_I(t)\vert\Phi\rangle$$
+
+$$\hat{E}_I = i\sum_{k,\lambda}\sqrt{\frac{\hbar\omega_k}{2\epsilon_0V}}\vec{\epsilon}_{k,\lambda}(\hat{a}_{k,\lambda}e^{i(\vec{k}.\vec{r}-\omega_kt)} - \hat{a}^{\dagger}_{k,\lambda}e^{-i(\vec{k}.\vec{r}-\omega_kt)})$$
+
+$$\hat{\vec{d}}_I = \sum_{n,m} \vec{d}_{n,m}e^{i(\Omega_n-\Omega_m)t}\vert\phi_n\rangle\langle\phi_m\vert = \hat{\vec{d}}_I = \sum_{n,m} \vec{d}_{n,m}e^{i(\Omega_n-\Omega_m)t}\hat{P}_{n,m}$$
+
+$$\hat{W}_I = -\sum_{n,m}\sum_{k,\lambda}i\sqrt{\frac{\hbar\omega_k}{2\epsilon_0V}}\vec{\epsilon}_{k,\lambda}(\hat{a}_{k,\lambda}e^{i(\vec{k}.\vec{r}-\omega_kt)} - \hat{a}^{\dagger}_{k,\lambda}e^{-i(\vec{k}.\vec{r}-\omega_kt)}).\vec{d}_{n,m}e^{i(\Omega_n-\Omega_m)t}\vert\phi_n\rangle\langle\phi_m\vert$$
+
+\subsection{approximation ondes tournantes}
+
+$ n>m \Rightarrow \Omega_n > \Omega_m$ alors on ne garde que $(\Omega_n -\Omega_m -\omega_k) $ résonnants
+
+$$\hat{W}_I = -\sum_{n>m}\sum_{k,\lambda}i\sqrt{\frac{\hbar\omega_k}{2\epsilon_0V}}\vec{\epsilon}_{k,\lambda}.\left(\vec{d}_{n,m}\hat{P}_{n,m}\hat{a}_{k,\lambda}e^{i(\vec{k}.\vec{r}+(\Omega_n -\Omega_m -\omega_k)t)} - \vec{d}_{m,n}\hat{P}_{m,n}\hat{a}^{\dagger}_{k,\lambda}e^{-i(\vec{k}.\vec{r}+(\Omega_n -\Omega_m -\omega_k)t)}\right)$$
+
+\paragraph{Probabilité de transition/détection :} $\vert\Psi_0\rangle =\vert\phi_0\rangle\otimes\vert\chi_0\rangle \rightarrow \vert\Psi_F\rangle =\vert\phi_N\rangle\otimes\vert\chi_F\rangle$
+
+$$P_{0\rightarrow F} = \frac{1}{\hbar^2}t^2 sinc^2((\Omega_N-\Omega_0-\omega_{k0})t/2)\frac{\hbar\omega_{k0}}{2\epsilon_0V}\vert\vec{d}_{N,0}.\vec{k}_{k0}\vert^2\vert\langle\chi_F\vert\hat{a}_{k0,\lambda0}\vert\chi_0\rangle\vert^2$$
+
+$$P_{\Psi_0\rightarrow F = \phi_N} = \frac{1}{\hbar^2}t^2 sinc^2((\Omega_N-\Omega_0-\omega_{k0})t/2)\frac{\hbar\omega_{k0}}{2\epsilon_0V}\vert\vec{d}_{N,0}.\vec{k}_{k0}\vert^2\langle\chi_0\vert\hat{a}^{\dagger}_{k0,\lambda0}\hat{a}_{k0,\lambda0}\vert\chi_0\rangle$$
+
+\paragraph{Probabilité de double detection :} $\vert\Psi_0\rangle =\vert\phi^1_0\rangle\otimes\vert\phi^2_0\rangle\otimes\vert\chi_0\rangle \rightarrow \vert\Psi_F\rangle =\vert\phi^1_N\rangle\otimes\vert\phi^2_M\rangle\otimes\vert\chi_F\rangle$
+
+$$P_{\Psi_0\rightarrow \phi_{N,M}} = \frac{1}{\hbar^4}t^4 sinc^2((\Omega_N-\Omega_0-\omega_{k0})\frac{t}{2})sinc^2((\Omega_M-\Omega_0-\omega_{k0})\frac{t}{2})\left(\frac{\hbar\omega_{k0}}{2\epsilon_0V}\right)^2\vert\vec{d}_{N,0}.\vec{k}_{k0}\vert^2\vert\vec{d}_{M,0}.\vec{k}_{k0}\vert^2\langle\chi_0\vert\hat{a}^{\dagger 2}_{k0,\lambda0}\hat{a}^2_{k0,\lambda0}\vert\chi_0\rangle$$
+\end{document}
