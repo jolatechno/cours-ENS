@@ -1,0 +1,44 @@
+Quelques indications pour la lecture et la présentation des articles
+
+I) Article Veyrat
+
+1) retouver les niveaux de Landau du graphène ; que fait le gap Zeeman avec les niveaux de Landau ?
+
+2) essayer de retrouver le comportement des branches de spin et de vallée du niveau n=0 lors qu'on s'approche du bord ; pour ce faire, considérer un petit gap dû à la levée de dégénérescence des sous-réseaux dans la feuille de graphène qui diverge lorsqu'on s'approche des bord
+
+3) discuter les états de bord à nu=0
+
+4) comprendre les résistances mesurées sur la figure 3, en utilisant le formalisme de Landauer et Büttiker sur les dispositifs esquissés sur la figure 3B
+
+II) Article Novoselov
+
+1) discuter le spectre des niveaux de Landau associé au hamiltonien H_2 (p. 179, colonne 2) ainsi que de sa forme généralisée H_J, où J est un entier
+2) discuter la dégénérescence des niveaux, en faisant particulièrement attention aux niveaux à énergie nulle
+3) comprendre l'effet Hall quantique ainsi que les facteurs de remplissage correspondant aux plateaux de Hall dans la bi-couche de graphène
+4) essayer de comprendre la forme du hamiltonien H_2 comme un développement à basse énergie d'un modèle de liaisons fortes (indication: pour cela, consulter par exemple l'article de revue de Castro Neto, Rev. Mod. Phys. 81, 109 (2009)).
+
+III) Article Graphène Photonique
+
+1) Retrouver l'Hamiltonien du graphène, la position des cônes de Dirac et la dispersion linéaire
+2) Expliquer la méthode pour l'implémenter expérimentalement.
+3) Expliquer la méthode de mesure et décrire le résultat
+
+IV) Article Hafezi
+
+1) Introduire l'Hamiltonien de Haldane et l'intérêt de ce modèle
+2) Expliquer la méthode expérimentale pour l'implémenter
+3) Décrire le résultat. Comment la symétrie par renversement du temps est elle brisée?
+
+V) Article sur l'effet Hall optique de spin
+
+1) Rappeler ce qu'est l'effet Hall de spin.
+2)  Comment utiliser la polarisation comme degré de liberté de spin?
+3) Comment définir un champ magnétique effectif?
+4) Décrire l'expérience et le résultat expérimental
+
+VI) Article Roth
+
+1) Rappeler l'effet Hall quantique de spin et les états de bord
+2) Rappeler la formule de Landauer et Büttiker à plusieurs terminaux
+3) En se rappelant comment cette formule est utilisée pour comprendre les mesures montrées sur la figure 1, expliquer les mesures présentées sur les figures 3 et 4.
+4) En considérant les résultats attendus pour des états chiraux, expliquer pourquoi ces mesures sont une preuve expérimentale pour la présence d'états hélicaux.

@@ -1,0 +1,98 @@
+\pdfminorversion=4
+\documentclass[]{article}
+\usepackage{amsfonts} % for "\mathbb" macro
+\newcommand{\N}{\mathbb{N}}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{document}
+
+\section{Dynamique}
+
+On a deux type d'element, l'element vide $\phi$ et des element non vide que l'on representera comme des entier positif $u \in \N$.
+
+\noindent Les regles d'arithmetique de nom pour les element non-vide sont:
+\[ u \wedge v = \left[ u \; v \right] \] 
+\[ \left[ u \; v \right].r = v \] 
+\[ \left[ u \; v \right].l = u \]
+
+\noindent Pour un element non-vide et un element vide on a:
+\[ u \wedge \phi = u \]
+\[ u.l = u \] 
+\[ u.r = \phi \]
+
+\noindent Et entre les element vides on a:
+\[ \phi.l = \phi \]
+\[ \phi.r = \left[\phi \right]\]
+\[ \phi \wedge \left[\phi \right] = \phi\]
+
+\noindent Qui se generalisent pour $\phi_n = \left[\phi_{n - 1}\right]$ et $\phi_0 = \phi$ :
+\[ \phi_n.l = \phi_n \]
+\[ \phi_n.r = \phi_{n + 1}\]
+\[ \phi_n \wedge \phi_{n + 1} = \phi_n\]
+
+\noindent Pour deux noeud $x$ et $y$ qui ne sont pas dans les regles precedente, on suit les même regles que pour deux element non-vides:
+\[ x \wedge y = \left[ x \; y \right] \] 
+\[ \left[ x \; y \right].r = y \] 
+\[ \left[ x \; y \right].l = x \]
+
+\section{Representation}
+
+On represente un noeud par trois listes:
+\begin{itemize}
+	\item $names$ qui represente le nom de chaque element (on pose -1 $ \Leftrightarrow \left[ \; \right] $ )
+	\item $bracket\_depth$ qui represente le nombre de brackets entourant l'element
+	\item $immediatly\_left\_bracket $ qui represente le nombre de bracket "{[}" imediatement à gauche de l'element
+\end{itemize}
+
+\noindent La dynamique peut alors suivre ces regles:
+
+\begin{itemize}
+	\item On cherche d'abord l'indice separant x.l de x.r. Pour cela on cherche l'indice auquel 
+	\[ bracket\_depth = immediatly\_left\_bracket + 1 \]
+	\item si cette indice est bien strictement dans les limite de la liste, on "deccoupe" alors le noeud en deux (on decremente $ immediatly\_left\_bracket\left[0\right] $ puis chaque $ bracket\_depth$)
+	\item si l'indice est à la limite de la liste, on verifie si la liste est un unique element vide, dans ce case x.l = x et x.r = {[x]} ce que l'on obtient en incrementant $ immediatly\_left\_bracket $ et $ bracket\_depth $.
+	\item Sinon, x.l = x et on retourne x.r = {[\;]}
+\end{itemize}
+
+\noindent Il est ensuite facile d'inverser ces regle pour implementer la fusion de noeud.
+
+\noindent Exemple de representation d'un noeud $x$ :
+
+\[
+\begin{matrix}
+ \begin{matrix}
+ names \\
+ bracket\_depth \\ 
+ immediatly\_left\_bracket \\
+ \;
+ \end{matrix} & \underbrace{\begin{matrix}
+  0 & 1 \\\:
+ 2 & 2 \\
+ 2 & 0 \\
+ \left[\left[0 \right.\right. & \left. 1 \right]
+ \end{matrix}}_{x.l} & \underbrace{\begin{matrix}
+2 & -1 & 3 \\
+3 & 3 & 2 \\
+2 & 0 & 0 \\
+\left[\left[2 \right.\right. & \left.\left[\;\right]\right] & \left.\left. 3 \right]\right]
+ \end{matrix}}_{x.r}
+ \end{matrix}
+\]
+
+\section{Ensemble de noeud}
+
+Un graph est nommé par une liste de neud $ \left[ x_0 \; x_1 \; ... \; x_{n} \right] $. \hfill \break
+
+\noindent On initilaisera toujour un graph par $x_i = i$, donc un graph commence par un nom $ \left[ 0 \; 1 \; ... \; n \right] $. \hfill \break
+
+\noindent Pour comparer les nom de deux graphs, il faudrait comparer toute les rotation relative possible des les deux liste de graphs. Pour eviter ce probleme, on garde en memoire la variable $zero\_index$ qui est l'index du noeud du graph qui contient l'element 0. \hfill \break
+
+\noindent Soit deux graphs nommés $ \left[x_0 \; x_1 \; ... \; x_n \right] $ et $ \left[y_0 \; y_1 \; ... \; y_n \right] $ qui ont leurs $zero\_index$ notés $zero\_index_x$ et $zero\_index_y$ , Pour que ces deux graphs porte le même nom, il faut que $x_{zero\_index_x} == y_{zero\_index_y}$. \hfill \break
+
+\noindent On peut alors comparer une seul rotation relative des graphs, en comparant tout les noeud $x_i$ et $y_j$ avec:
+\[i - j = offset = zero\_index_x - zero\_index_y\]
+
+\end{document}
