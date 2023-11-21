@@ -75,7 +75,7 @@ We can conclude that at least qualitatively speacking, it seams that the DNA is 
 An other model that is interesting to unstand the dynamic of a viral capsid is the thermodynamic model of a long polymer under confinement. The idea is simply to use what we know from tutorial 1 about the physics of polymer chains. Which is the following:
 
 \begin{eqnarray}
-    G_b & = & \int_{0}^{L} \frac{k_B T \xi_p}{2} \left( \partial_z^2 \mathbf{r}(s) \right)^2 ds
+    G_{bend} & = & \int_{0}^{L} \frac{k_B T \xi_p}{2} \left( \partial_z^2 \mathbf{r}(s) \right)^2 ds
 \end{eqnarray}
 
 As the geometry is strongly confined, it is likely that we could not ignore the interaction between the DNA strands. The interaction term of the free energy of this problem can be derives in serveral maner.
@@ -89,31 +89,76 @@ We will first study some simpler geometries analytically, then move to simple nu
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{analitical_geometries.png}
-    \caption{Geometries that will be studied analytically: (a) is a simple cylindrical capsid, (b) is a spherical capsid and (c) is a capped cylindrical capsid. We will only model cylindrical and capped cylindrical capsids as spherical capsids can be modeled from a capped-cylindrical capsid with $H=0$}
+    \caption{Geometries that will be studied analytically: (a) is a simple cylindrical capsid, (b) is a spherical capsid and (c) is a capped cylindrical capsid. We will only model cylindrical and capped cylindrical capsids as spherical capsids can be modeled from a capped-cylindrical capsid with $H=0$.}
     \label{fig:enter-label}
 \end{figure}
 
 \subsection{Cylindrical capsid}
 
-Blabla....
+We assume that DNA strands are separated by a constant $ds$ distance.
+
+We also assume that strand at a distance $R$ from the center are simply looping at a curvature $\partial_z^2 \mathbf{r} = \frac{1}{R}$.
+
+We have at a radius R $N(R) = L_{section}(R)/ds = H/ds$ DNA strands per $ds$ unit of radius (with $L_{section}(R)$ being the length of the vertical section at radius $R$, which for the simple cylindrical capsid is simply constant and equal to $H$).
+
+We thus have the bending energy $G_{bend}$:
+
+\begin{eqnarray}
+    G_{bend} & = & \int_{R}^{R_{out}} \frac{k_B T \xi_p}{2} N(r)  \left( \int_{0}^{2\pi r} \frac{1}{r^2} dl \right) \frac{dr}{ds} =  \frac{\pi k_B T \xi_p}{ds^2} \int_{R}^{R_{out}} \frac{L(r)}{r} dr \\
+    G_{bend}^{cylinder} & = & \frac{\pi k_B T \xi_p}{ds^2} ln(\frac{R_{out}}{R}) H
+\end{eqnarray}
+
+And also the electronic repulsion energy $G_{charge}$, assuming that we have hexagonal packed parallel strands of length $2\pi r$:
+
+\begin{eqnarray}
+    G_{charge} & = & \int_{R}^{R_{out}} 6 \pi r N(r) \nu(ds) dr = \frac{6 \pi \nu(ds)}{ds} \int_{R}^{R_{out}} r L(r) dr = 3 \nu(ds) L_{inserted} \\
+    G_{charge}^{cylinder} & = & \frac{3 \pi \nu(ds)}{ds} \left( R_{out}^2 - R^2 \right) H
+\end{eqnarray}
+
+Identifying the inserted length $L_{inserted}$:
+
+\begin{eqnarray}
+    L_{inserted} & = & \frac{2 \pi}{ds} \int_{R}^{R_{out}} r L(r) dr \\
+    L_{inserted}^{cylinder} & = & \frac{\pi }{ds} \left( R_{out}^2 - R^2 \right) H
+\end{eqnarray}
+
+We eliminate the variable $ds$ in the above equations by minimizing $G_{tot}(ds) = G_{bend} + G_{charge}$:
+
+\begin{eqnarray}
+    TODO
+\end{eqnarray}
 
 \subsection{Capped cylindrical capsid}
 
-Blabla....
+We will now do the same analysis as in the previous section, but using a different geometry:
+
+
+\begin{eqnarray}
+    G_{bend}^{capped\_cyl.} & = & TODO \\
+    L_{inserted}^{capped\_cyl.} & = & TODO \\
+    G_{charge}^{capped\_cyl.} & = & TODO
+\end{eqnarray}
+
+We eliminate the variable $ds$ in the above equations by minimizing $G_{tot}(ds) = G_{bend} + G_{charge}$:
+
+\begin{eqnarray}
+    TODO
+\end{eqnarray}
 
 \subsection{Capsid geometry comparison}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{|| r | c | c | c ||}
         \hline \hline
         \textbf{Name of the variable} & \textbf{cylindrical capsid (a)} & \textbf{spherical capsid (b)} & \textbf{capped cylindrical capsid (c)} \\
         \hline \hline
-        Packing section & TODO & TODO & TODO \\
-        Packing volume  & TODO & TODO & TODO \\
-        Total energy  & TODO & TODO & TODO \\
-        Specific energy  & TODO & TODO & TODO \\
-        Packing pressure  & TODO & TODO & TODO \\
+        $L_{section}(R)$ & $H$ & $\sqrt{R_{out}^2 - R^2}$ & $H + \sqrt{R_{out}^2 - R^2}$ \\ \hline
+        $L_{inserted}$ & $\frac{\pi }{ds} \left( R_{out}^2 - R^2 \right) H$ & TODO & TODO \\ \hline
+        $G_{bend}$ & $\frac{\pi k_B T \xi_p}{ds^2} ln(\frac{R_{out}}{R}) H$ & TODO & TODO \\ \hline
+        $G_{charge}$ & $\frac{3 \pi \nu(ds)}{ds} \left( R_{out}^2 - R^2 \right) H$ & TODO & TODO \\ \hline
+        $G_{tot}$ & TODO & TODO & TODO \\ \hline
+        $\frac{G_{tot}}{L_{inserted}}$ & TODO & TODO & TODO \\
         \hline \hline
     \end{tabular}
     \caption{Analytical analisis of the various capsid geometries.}
@@ -132,8 +177,13 @@ Blabla...
 
 Although the Icosahedral capsid geometry could be studied analytically, we choose to do a simple numerical analysis as a proof of concept.
 
-We will model (as shown in the top view) that the DNA packs in a circular way parallel to the vertical axis, in a circle of radius equal to the circle that fits inside of the octagonal section of the capsid. We can argue that the DNA will pack this way - at least for "low" packing proportion - to minimise its bending energy, which would be largely increased by the tight bends required to more closely follow the octagonal section of the capsid.
+We will model (as shown in the top view) that the DNA packs in a circular way parallel to the vertical axis, in a circle of radius equal to the circle that fits inside of the octagonal section of the capsid. We can argue that the DNA will pack this way - at least for "low" packing proportion - to minimise its bending energy, which would be largely increased by the tight bends required to more closely follow the octagonal section of the capsid. \\
 
+We will do the same analysis as previously as we are assuming that the geometry is essentially a revolving geometry, the only difference being that $L_{section}(R)$ is not simply defined, thus we will numerically integrate every integral depending on $L_{section}(R)$.
+
+This in turns requires us to numerically minimise $ds$.
+
+TODO
 
 \section{Hestimation of the pressure inside the capsid using the charge of DNA}
 
