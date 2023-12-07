@@ -17,14 +17,14 @@
 
 \begin{abstract}
 \noindent
-In order to infect a host cell, viruses must eject their genome, which is then replicated, followed by the synthesis of the proteins encoded in it. Once the concentration of the proteins is high enough, the construction of the viral capsids, which are rigid protein boxes, is ignited. The next step is the packaging of the viral DNA inside the capsids, which can then be injected into other host cells. The packaging of DNA in viruses is thus an essential step in their life cycle. In this article, we describe a simple physical model explaining this packaging process for the bacteriophage virus $\phi 29$. 
+In order to infect a host cell, viruses must eject their genome, which is then replicated, followed by the synthesis of the proteins encoded in it. Once the concentration of the proteins is high enough, the construction of the viral capsids, which are rigid protein boxes, is ignited. The next step is the packaging of the viral DNA inside the capsids, which can then be injected into other host cells. The packaging of DNA in viruses is thus an essential step in their life cycle. In this article, we describe a simple physical model explaining this packaging process for diverse shaped capsids. 
 \end{abstract}
 
 
 \section{Introduction: Orders of magnitudes}
 The dynamic of the packing of DNA in a bacteriophage and viruses has been investigated experimentally and theoretically and is now quite elucidated (see \cite{phillips2005} for a complete review). These organisms are forms by a icosahedral capsid that encloses a double stranded beam of DNA. Inside the capsid the DNA is just solvated in an ionic solution. There is no tertiary structure formed of histones and nucleosomes as in eucariot cells. The life cycle of the virus is as follow. It interacts via its spike protein with the membrane of the cell and is able to introduce its genome inside the cell. The DNA of the viruse is then replicated by the cell and expressed to produce the proteins necessary to forme other capsids. The formation of a new viral capsid take typically 10 to 15 minutes for phage $\lambda$ or T4. When a capsid is formed and the genome completely replicated, the portal motor of the capsid, will package the DNA inside the the capsid. This process is typically realised in 5 minutes. After approximately one hour, the cell tends to be full of viruses and dies. This is the lisis that releases the viruses (or phages) in the medium.
 
-The capside has the shape of a sphere or a cylinder with a semi-sphere at each end-cap. WHen the DNA is condensed inside the capsid, it takes the shape of a spool. The strand organise themselves in hexagon with an interstrand space of the order of $25~\AA$ \cite{earnshaw1977}. The capsid radius is smaller than the persistence length of the DNA strand. which means that the DNA is highly constrained inside the capsid. The capsid is impermeable to water. But it is permeable to Polyethilen Glycole (PEG). This property have been used by Evilevitch to apply an osmotic presure against the extraction of the genom of the phage \cite{evilevitch2003}. They report that the ejection of the DNA strand is prevented by a pressure of $20~atm.$
+The capside has the shape of a sphere or a cylinder with a semi-sphere at each end-cap. When the DNA is condensed inside the capsid, it takes the shape of a spool. The strand organise themselves in hexagon with an interstrand space of the order of $25~\AA$ \cite{earnshaw1977}. The capsid radius is smaller than the persistence length of the DNA strand. which means that the DNA is highly constrained inside the capsid. The capsid is impermeable to water. But it is permeable to Polyethilen Glycole (PEG). This property have been used by Evilevitch to apply an osmotic presure against the extraction of the genom of the phage \cite{evilevitch2003}. They report that the ejection of the DNA strand is prevented by a pressure of $20~atm.$
 
 It is believed that the DNA inside the capside organises it self as a spool. But the first experimental measurement of the spatial organisastion of DNA inside the capsid, during the packing process has been observed only in 2008 by Comoli and al. \cite{comoli2008}. They showed that contrarily to what was believed before (for instance in \cite{phillips2005, prohit2005}, DNA tends to organise in the spool structure very late in the packaging process. Until $78\%$ of the genome is packed, the DNA inside the capsides stays in a desordered phase.
 
@@ -35,7 +35,7 @@ It is believed that the DNA inside the capside organises it self as a spool. But
         \textbf{Name of the variable} & \textbf{Symbol} & \textbf{Value} & \textbf{Source} \\
         \hline \hline
         Diameter of the capside  & $d_{cap}$   & $42\times 54~nm$ & Phage $\phi29$ \cite{tao1998}  \\
-        Diameter of the dsDNA    & $ d_{dna}$  & $1~nm$           & \cite{phillips2005} \\
+        Diameter of the DNA    & $ d_{dna}$  & $1~nm$           & \cite{phillips2005} \\
         Length of the DNA strand & $ L_{tot}$  & $5.5.10^{3}~nm$  & Phage $\phi29$ \cite{tao1998} \\
         Persistence length       & $ \xi_p $   & $50~m$           & \cite{smith2001} \\
         Gyration radius          & $ R_{G} $     & $300~nm$         & phage $\phi29$ \cite{phillips2005} \\
@@ -50,19 +50,19 @@ It is believed that the DNA inside the capside organises it self as a spool. But
 
 \section{Dimensional analysis model}
 
-To understand the relation between the packing percentage and the pressure inside the capsid,, let us start with a small scaling argument. If the DNA is rolled in a spool like structure made of $1$ fold and $N$ hoops in each fold (like a solenoid of $N$ turns). The the length of the DNA in this spool is : $N \sim \frac{L}{2 \pi R}$. Assuming that the interstrand spacing is $r_{IA}$ and assuming that the capsid is a cylinder of height $h$, we typically have $\frac{\sqrt{3}}{2} N r_{IA} \approx h \approx NR$ (assuming that in fact the capsid is almost sperical and $h \sim R$).
+To understand the relation between the packing percentage and the pressure inside the capsid, let us start with a small scaling argument. If the DNA is rolled in a spool like structure made of $1$ fold and $N$ hoops in each fold (like a solenoid of $N$ turns). The the length of the DNA in this spool is : $N \sim \frac{L}{2 \pi R}$. Assuming that the inter-strand spacing is $r_{IA}$ and assuming that the capsid is a cylinder of height $h$, we typically have $\frac{\sqrt{3}}{2} N r_{IA} \approx h \approx NR$ (assuming that in fact the capsid is almost spherical and $h \sim R$).
 An other way to evaluate the scaling law is to suppose that in fact the DNA is almost fully condensed and the cylinder is full of DNA. In this case, if we take a cut of the DNA spool parallel to the axis of the capsid, the surface occupied by DNA is typically: $N \pi r^2_{IA} \sim S$ where $S \sim \pi R^2$. Using once again the fact that $N \sim \frac{L}{2 \pi R}$ we can write $r_{IA} \sim \frac{R^{\frac{3}{2}}}{\sqrt{L}}\sqrt{2}$.
-The to deduce a pressure, we use the scaling law that have been pointed out experimentally by Rau et al.: $P \sim e^{-\frac{d_s}{c}}$ (where c is typically just here to addimentionalise $d_s$). We optain the two following scaling laws:
+Then to deduce a pressure, we use the scaling law that have been pointed out experimentally by Rau et al. \cite{rau1992}: $P \sim e^{-\frac{d_s}{c}}$ (where c is typically just here to adimentionalise $d_s$). We obtain the two following scaling laws:
 \begin{eqnarray}
     P &\sim& e^{\frac{- 2 \pi R^2}{cL}} \textnormal{ valid for small percentage of packing}\\
     P & \sim & e^{\frac{- \sqrt{2} R^{\frac{3}{2}}}{\sqrt{cL}}} \textnormal{ valid for high percentage of packing} 
 \end{eqnarray}
-Using the fact that a pressur is proportional to a force time a surface. Here the small surfance of a cut of the DNA, we can try to check our scaling law on the data provided in the subject. We took the points from the graph and ploted the pressure as a function of the inverrse of the percentage of genome packed. We fitted this curve with an exponential function: $x = e^{\gamma x}$. This gives us the result ploted in the figure. To check that the scaling is satisfactory, we can extract back the typical radius of the capsid witch is expressed:
+Using the fact that a pressure is proportional to a force time a surface. Here the small surface of a cut of the DNA, we can try to check our scaling law on the data provided in the subject. We took the points from the graph and plotted the pressure as a function of the inverse of the percentage of genome packed. We fitted this curve with an exponential function: $x = e^{\gamma x}$. This gives us the result plotted in the figure. To check that the scaling is satisfactory, we can extract back the typical radius of the capsid witch is expressed:
 \begin{eqnarray}
     R_{typ} & = &  \sqrt{\frac{\gamma}{2 \pi}} = 6,66 \textnormal{ for the law at low packing density}\\
     R_{typ} & = & 1.414 \gamma^{0.6666} = 32.13 \textnormal{ for the high packaging density}
 \end{eqnarray}
-We can conclude that at least qualitatively speacking, it seams that the DNA is compact in the denser form we have proposed.
+We can conclude that at least qualitatively speaking, it seams that the DNA is compact in the denser form we have proposed.
 
 \begin{figure}[H]
     \centering
@@ -72,19 +72,76 @@ We can conclude that at least qualitatively speacking, it seams that the DNA is 
 \end{figure}
 
 \section{Long polymer model of DNA inside a viral capsid}
-An other model that is interesting to unstand the dynamic of a viral capsid is the thermodynamic model of a long polymer under confinement. The idea is simply to use what we know from tutorial 1 about the physics of polymer chains. Which is the following:
+An other model that is interesting to understand the dynamic of a viral capsid is the thermodynamic model of a long polymer under confinement. The idea is simply to use what we know from tutorial 1 about the physics of polymer chains. Which is the following:
 
 \begin{eqnarray}
-    G_{bend} & = & \int_{0}^{L} \frac{k_B T \xi_p}{2} \left( \partial_z^2 \mathbf{r}(s) \right)^2 ds
+    G_{bend} & = & \int_{0}^{L} \frac{k_B T \xi_p}{2} \left( \partial_s^2 \mathbf{r}(s) \right)^2 d_s
+\end{eqnarray}
+For a polymer which is rolled with a regular radius, and no tension, this leads to the expression
+
+\begin{eqnarray}
+    G_{bend} & = & \int_{0}^{L} \frac{k_B T \xi_p}{2} \frac{1}{R^2(s)} d_s
 \end{eqnarray}
 
-As the geometry is strongly confined, it is likely that we could not ignore the interaction between the DNA strands. The interaction term of the free energy of this problem can be derives in serveral maner.
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.3\textwidth]{schema_packing.png}
+    \caption{Schematic of the packing of DNA strands.}
+    \label{fig:force}
+\end{figure}
+
+When we perform the integral over $d_s$, shell by shell, we write $N(R)$ the number of turns of radius R. Thus the radial density of turns is : $\frac{2N(R)}{\sqrt{3} d_s}$ where $d_s$ is the distance between two strands of DNA. The factor $\frac{\sqrt{3}}{2} = sin \left( \frac{\pi}{3} \right)$ account to the fact that the DNA stands are organised in a triangular lattice.
+\\
+TODO : add a figure with the triangular lattice and the understand space
+\\
+We end up with the expression:
+\begin{eqnarray}
+    G_{bend} & = & \frac{k_B T \xi_p}{2} \int_{R_{in}}^{R_{out}} \frac{N(R)}{\sqrt{3} d_s} \frac{1}{R^2} dR \int_{0}^{2\pi R} ds \\
+    G_{bend} & = & \frac{ \pi k_B T \xi_p}{\sqrt{3} d_s} \int_{R_{in}}^{R_{out}} \frac{N(R)}{R} dR
+\end{eqnarray}
+
+%  and tension
+There is also room for twisting energy stored in the DNA strangds, this effect will appear as a third order derivative in the hamiltonian density. This leads to the contribution to the energy :
+\begin{eqnarray}
+    G_{twist} &=& \frac{\xi_{tw} k_B T}{2} \int_{0}^{L} \left( \partial_s^3 r \right)^2 ds \\
+\end{eqnarray}
+We chose to neglate this term as the current state of the art doesn't prove wether the strand can twist or not (i.e. wether the motor spins freely, is fixed, or has a specific spin patern). We thus assume by neglating this term that the motor turns freely, thus allowing the strand to un-twist.
+
+We also note that we don't take any tension into account as the tension or compression energy is the one deriving from the pushing force of the motor, which we are trying to figure out (at mechanical equilibrium, including the tension force and thus all forces would naturally result in a derivative of the total energy equal to 0, thus not giving us the motor pushing force).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.3\textwidth]{schema_equilibre.png}
+    \caption{Simple example of forces cancelling out.}
+    \label{fig:force}
+\end{figure}
+
+To simplify our argument we take this simple hanging mass as an example: We have here $F_e + F_g = 0$. But for the sake of argument and for a valid comparison let's say that we want to figure ouf the force $F_{hang}$ holding the system (analogous to the pushing force of the motor in our example) from the total energy.
+
+If we include the energy of the spring (which is analogous to the tension/compression energy of the DNA; similarly it is the way the force is transmitted), we obtain a total energy $G_{tot} = gMh - kh^2$, but at equilibrium forces even out, thus $Mg = kh$. We thus have $G_{tot} = 0$ and $\frac{\partial G_{tot}}{\partial h} = 0$.
+
+If we correctly chose to exclude the tension energy of the spring, we ould have had $G_{tot} = hMg$, thus we correctly obtain $F_{hang} = -\frac{\partial G_{tot}}{\partial h} = MG \left(= -F_g = F_e \right)$ \\
+
+The other term that must be taken into account in the energy in the system is the repulsion between DNA strands. In fact, each base pair is charged with a charge $+2$ for this purpose, DNA is a strongly charged molecule $ \sim 7 C.nm^{-1} $. Due to this charge, DNA could not be stable if it was not in a solution containing counter ions. The force has been determined experimentally based on measurement of osmotic pressure. The force between two unit length DNA strands at distance $d_s$ is : $f_{el} \left(d_s\right) = \frac{F_0 d_s}{\sqrt{3}} exp \left(\frac{-d_s}{c}\right) $. $F_0$ is homogeneous to a force and $c$ to a length. They are parameters that should be determined from fits. No direct measurement have been done to our knowledge \cite{purohit2003}.
+\begin{eqnarray}
+    G_{el} &=& \int_{\infty}^{d_s} f_{el} \left( d'_s \right) dd'_s \\
+    & = & \int_{\infty}^{d_s} \frac{F_0 d'_s}{\sqrt{3}} exp \left(\frac{-d'_s}{c}\right) dd'_s \\
+    & = & \sqrt{3} F_0 \left( c^2 + cd_s \right) L exp \left( \frac{- d_s}{c} \right) \textnormal{(we made an intergration by part)} \label{eq:gelec}
+\end{eqnarray}
+
+
+In fact it has been discussed that this expression must be modified in the presence of trivalent ions. Phillips and al. derive the expression \cite{phillips2005}:
+\begin{eqnarray}
+    G_{el} &=& \sqrt{3} F_0 L \left[ \left( c^2 + cd_s \right) exp \left( \frac{- d_s}{c} \right) - \left( c^2 + d_s \right) - \frac{1}{2} \left( d_0^2 + d_s^2 \right) \right] \label{eq:gelec2}
+\end{eqnarray}
+This expression leads to a small attractive potential at long distance and strong repulsive potential for distance smaller of the order of $d_0$. As experimental evidences shows that when the DNA is packed, it is in this regime. This allows to use the expression \ref{eq:gelec}. As the parameter $d_0$ and $c$ and $F_0$ \ref{eq:gelec} and \ref{eq:gelec2} are determined threw a fit on experimental data of parallel DNA strands, it naturally incorporates electric repulsion and entropic effects and maybe other effect. However it does not include any contribution from binding energy.
+
 
 \section{Impact of capsid geometry on the packing pressure}
 
 We will study a variety of capsid geometries to assess the impact of this geometry on the packing pressure.
 
-We will first study some simpler geometries analytically, then move to simple numeric analysis.
+% We will first study some simpler geometries analytically, then move to simple numeric analysis.
 
 \begin{figure}[H]
     \centering
@@ -95,37 +152,42 @@ We will first study some simpler geometries analytically, then move to simple nu
 
 \subsection{Cylindrical capsid}
 
-We assume that DNA strands are separated by a constant $ds$ distance.
+We assume that DNA strands are separated by a constant $d_s$ distance.
 
-We also assume that strand at a distance $R$ from the center are simply looping at a curvature $\partial_z^2 \mathbf{r} = \frac{1}{R}$.
+We also assume that strand at a distance $R$ from the centre are simply looping at a curvature $\partial_z^2 \mathbf{r} = \frac{1}{R}$.
 
-We have at a radius R $N(R) = L_{section}(R)/ds = H/ds$ DNA strands per $ds$ unit of radius (with $L_{section}(R)$ being the length of the vertical section at radius $R$, which for the simple cylindrical capsid is simply constant and equal to $H$).
+We have at a radius R $N(R) = \frac{h(R)}{d_s} = \frac{H}{d_s} $ DNA strands per $d_s$ unit of radius (with $h(R)$ being the length of the vertical section at radius $R$, which for the simple cylindrical capsid is simply constant and equal to $H$).
 
 We thus have the bending energy $G_{bend}$:
 
 \begin{eqnarray}
-    G_{bend} & = & \int_{R}^{R_{out}} \frac{k_B T \xi_p}{2} N(r)  \left( \int_{0}^{2\pi r} \frac{1}{r^2} dl \right) \frac{dr}{ds} =  \frac{\pi k_B T \xi_p}{ds^2} \int_{R}^{R_{out}} \frac{L(r)}{r} dr \\
-    G_{bend}^{cylinder} & = & \frac{\pi k_B T \xi_p}{ds^2} ln(\frac{R_{out}}{R}) H
+    G_{bend} & = & \int_{R}^{R_{out}} \frac{k_B T \xi_p}{2\sqrt{3}} N(r)  \left( \int_{0}^{2\pi r} \frac{1}{r^2} dl \right) \frac{dr}{d_s} =  \frac{\pi k_B T \xi_p}{\sqrt{3}d_s^2} \int_{R}^{R_{out}} \frac{h(r)}{r} dr \\
+    G_{bend}^{cylinder} & = & \frac{\pi k_B T \xi_p}{\sqrt{3}d_s^2} ln \left( \frac{R_{out}}{R} \right) H \textnormal{\bf ~There must an addition $\frac{1}{\sqrt{3}}$ factor.}
 \end{eqnarray}
 
 And also the electronic repulsion energy $G_{charge}$, assuming that we have hexagonal packed parallel strands of length $2\pi r$:
 
 \begin{eqnarray}
-    G_{charge} & = & \int_{R}^{R_{out}} 6 \pi r N(r) \nu(ds) dr = \frac{6 \pi \nu(ds)}{ds} \int_{R}^{R_{out}} r L(r) dr = 3 \nu(ds) L_{inserted} \\
-    G_{charge}^{cylinder} & = & \frac{3 \pi \nu(ds)}{ds} \left( R_{out}^2 - R^2 \right) H
+    G_{charge} & = & \int_{R}^{R_{out}} 6 \pi r N(r) G_{el}(d_s) dr = \frac{6 \pi G_{el}(d_s)}{\sqrt{3}d_s} \int_{R}^{R_{out}} r h(r) dr = 3 G_{el}(d_s) L_{inserted} \\
+    G_{charge}^{cylinder} & = & \frac{\sqrt{3} \pi G_{el}(d_s)}{d_s} \left( R_{out}^2 - R^2 \right) H
 \end{eqnarray}
 
 Identifying the inserted length $L_{inserted}$:
 
 \begin{eqnarray}
-    L_{inserted} & = & \frac{2 \pi}{ds} \int_{R}^{R_{out}} r L(r) dr \\
-    L_{inserted}^{cylinder} & = & \frac{\pi }{ds} \left( R_{out}^2 - R^2 \right) H
+    L_{inserted} & = & \frac{2 \pi}{\sqrt{3}d_s} \int_{R}^{R_{out}} r h(r) dr \\
+    L_{inserted}^{cylinder} & = & \frac{\pi }{\sqrt{3}d_s} \left( R_{out}^2 - R^2 \right) H
 \end{eqnarray}
 
-We eliminate the variable $ds$ in the above equations by minimizing $G_{tot}(ds) = G_{bend} + G_{charge}$:
+We eliminate the variable $d_s$ in the above equations by minimizing $G_{tot}(d_s) = G_{bend} + G_{charge}$:
 
 \begin{eqnarray}
-    TODO
+    \frac{\partial G_{tot}}{\partial d_s} & = & 0 \\
+    \frac{\partial G_{tot}}{\partial d_s} & = & \frac{\partial G_{bend}}{\partial d_s} + \frac{\partial G_{charge}}{\partial d_s} \\
+    \frac{\partial G_{tot}^{cylinder}}{\partial d_s} & = & - \frac{2 \pi k_B T \xi_p}{\sqrt{3}d_s^3}  ln \left( \frac{R_{out}}{R} \right) H \\
+    & + & \sqrt{3} \pi \left[ \frac{f_{el}(d_s)}{d_s} - \frac{G_{el}(d_s)}{d_s^2} \right] \left( R_{out}^2 - R^2 \right) H \\
+    \frac{\partial G_{tot}^{cylinder}}{\partial d_s} & = & - \frac{2 \pi k_B T \xi_p}{\sqrt{3}d_s^3}  ln \left( \frac{R_{out}}{R} \right) H + \pi F_0 \left[  1 - 3 \frac{ c  }{d_s} - 3\frac{ c^2 }{d_s^2} \right] exp \left(\frac{-d_s}{c}\right) \left( R_{out}^2 - R^2 \right) H \\
+    d_{s,min}^{cylinder} & = & TODO
 \end{eqnarray}
 
 \subsection{Capped cylindrical capsid}
@@ -134,12 +196,16 @@ We will now do the same analysis as in the previous section, but using a differe
 
 
 \begin{eqnarray}
-    G_{bend}^{capped\_cyl.} & = & TODO \\
-    L_{inserted}^{capped\_cyl.} & = & TODO \\
-    G_{charge}^{capped\_cyl.} & = & TODO
+    G_{bend}^{capped\_cyl.} & = & \frac{\pi k_B T \xi_p}{3 d_s^2} \int_{R_{int}}^{R_{out}} \frac{h + 2 R \sqrt{1 - \frac{r^2}{R_{out}^2}}}{r} dr \\
+    & = & \frac{\pi k_B T \xi_p}{3 d_s^2} \left[ h \ln \left( \frac{R_out}{R_{in}} \right)  + 2R_{out} \ln \left( \frac{\sqrt{R_{out}^2 - R_{int}^2} + R_{out}}{R_{int}} \right) - 2 R_{out} \sqrt{\left( 1 - \frac{R_{in}^2}{R_{out}^2} \right)} \right] \\
+    L_{inserted}^{capped\_cyl.} & = & \frac{\pi }{\sqrt{3}d_s} \left( R_{out}^2 - R_{in}^2 \right) H + \frac{8\pi}{3\sqrt{3}d_s^2}(R_{out}^2 - R^2)^\frac{3}{2} \\
+\end{eqnarray}
+To optain $G_{carge}$ we can simply remark taht it is the sum of the $G_{el}$ in the sspherical capsid plus the one in the cylindrical capsid. We optain:
+\begin{eqnarray}    
+    G_{charge}^{capped\_cyl.} & = & \frac{\sqrt{3} \pi G_{el}(d_s)}{d_s} \left[ \left( R_{out}^2 - R^2 \right) + \frac{2R_{out}}{3} \left( 1 - \frac{R_{in}^2}{R_{out}^2} \right)^{\frac{3}{2}} \right]
 \end{eqnarray}
 
-We eliminate the variable $ds$ in the above equations by minimizing $G_{tot}(ds) = G_{bend} + G_{charge}$:
+We eliminate the variable $d_s$ in the above equations by minimizing $G_{tot}(d_s) = G_{bend} + G_{charge}$:
 
 \begin{eqnarray}
     TODO
@@ -147,45 +213,57 @@ We eliminate the variable $ds$ in the above equations by minimizing $G_{tot}(ds)
 
 \subsection{Capsid geometry comparison}
 
+\begin{small}
+
 \begin{table}[H]
     \centering
     \begin{tabular}{|| r | c | c | c ||}
         \hline \hline
         \textbf{Name of the variable} & \textbf{cylindrical capsid (a)} & \textbf{spherical capsid (b)} & \textbf{capped cylindrical capsid (c)} \\
         \hline \hline
-        $L_{section}(R)$ & $H$ & $\sqrt{R_{out}^2 - R^2}$ & $H + \sqrt{R_{out}^2 - R^2}$ \\ \hline
-        $L_{inserted}$ & $\frac{\pi }{ds} \left( R_{out}^2 - R^2 \right) H$ & TODO & TODO \\ \hline
-        $G_{bend}$ & $\frac{\pi k_B T \xi_p}{ds^2} ln(\frac{R_{out}}{R}) H$ & TODO & TODO \\ \hline
-        $G_{charge}$ & $\frac{3 \pi \nu(ds)}{ds} \left( R_{out}^2 - R^2 \right) H$ & TODO & TODO \\ \hline
+        $h(R)$ & $H$ & $2\sqrt{R_{out}^2 - R^2}$ & $H + 2\sqrt{R_{out}^2 - R^2}$ \\ \hline
+        $L_{inserted}$ & $\frac{\pi }{\sqrt{3}d_s} \left( R_{out}^2 - R^2 \right) H$ 
+        & $\frac{8\pi}{3\sqrt{3}d_s^2}(R_{out}^2 - R^2)^\frac{3}{2}$ 
+        & $\frac{\pi }{\sqrt{3}d_s} \left( R_{out}^2 - R^2 \right) H + \frac{8\pi}{3\sqrt{3}d_s^2}(R_{out}^2 - R^2)^\frac{3}{2}$ \\ 
+        \hline
+        $G_{bend}$ & $\frac{\pi k_B T \xi_p}{d_s^2} ln \left( \frac{R_{out}}{R} \right) H$ 
+        & $\frac{-4\pi\xi_pk_BT}{\sqrt{3}d_s}[\sqrt{R_{out}^2 - R^2} + \ln(\frac{R_{out} - \sqrt{R_{out}^2 - R^2}}{R})]$ 
+        & TODO \\ \hline
+        $G_{charge}$ & $\frac{3 \pi G_{el}(d_s)}{d_s} \left( R_{out}^2 - R^2 \right) H$ 
+        & $\frac{8\pi}{\sqrt{3}d_s^2}F_0(c^2 + d_s) (R_{out}^2 - R^2)^\frac{3}{2}\exp(-\frac{d_s}{c})$ 
+        & TODO \\ \hline
+
         $G_{tot}$ & TODO & TODO & TODO \\ \hline
         $\frac{G_{tot}}{L_{inserted}}$ & TODO & TODO & TODO \\
         \hline \hline
     \end{tabular}
     \caption{Analytical analisis of the various capsid geometries.}
 \end{table}
+    
+\end{small}
 
 Blabla... 
 
-\subsection{Numerical analysis of the icosahedral capsid geometry}
+% \subsection{Numerical analysis of the icosahedral capsid geometry}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{octogonal_geometry.png}
-    \caption{Icosahedral capsid geometry that will be studied numerically.}
-    \label{fig:enter-label}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.4\textwidth]{octogonal_geometry.png}
+%     \caption{Icosahedral capsid geometry that will be studied numerically.}
+%     \label{fig:enter-label}
+% \end{figure}
 
-Although the Icosahedral capsid geometry could be studied analytically, we choose to do a simple numerical analysis as a proof of concept.
+% Although the Icosahedral capsid geometry could be studied analytically, we choose to do a simple numerical analysis as a proof of concept.
 
-We will model (as shown in the top view) that the DNA packs in a circular way parallel to the vertical axis, in a circle of radius equal to the circle that fits inside of the octagonal section of the capsid. We can argue that the DNA will pack this way - at least for "low" packing proportion - to minimise its bending energy, which would be largely increased by the tight bends required to more closely follow the octagonal section of the capsid. \\
+% We will model (as shown in the top view) that the DNA packs in a circular way parallel to the vertical axis, in a circle of radius equal to the circle that fits inside of the octagonal section of the capsid. We can argue that the DNA will pack this way - at least for "low" packing proportion - to minimise its bending energy, which would be largely increased by the tight bends required to more closely follow the octagonal section of the capsid. \\
 
-We will do the same analysis as previously as we are assuming that the geometry is essentially a revolving geometry, the only difference being that $L_{section}(R)$ is not simply defined, thus we will numerically integrate every integral depending on $L_{section}(R)$.
+% We will do the same analysis as previously as we are assuming that the geometry is essentially a revolving geometry, the only difference being that $h(R)$ is not simply defined, thus we will numerically integrate every integral depending on $h(R)$.
 
-This in turns requires us to numerically minimise $ds$.
+% This in turns requires us to numerically minimise $d_s$.
 
-TODO
+% TODO
 
-\section{Hestimation of the pressure inside the capsid using the charge of DNA}
+\section{Estimation of the pressure inside the capsid using the charge of DNA}
 
 Right what I have in my notes.
 
@@ -195,7 +273,7 @@ Then the number of configurations is:
 
 \textbf{see page 371 of Phillips}
 
-\textbf{Why is it different from teh expression derived phenomenologicaly in the paper ? Can we bridge teh gap in some manner ?}
+\textbf{Why is it different from the expression derived phenomenologicaly in the paper ? Can we bridge the gap in some manner ?}
 
 \begin{equation}
     W({k_i},N) = \frac{N!}{\prod_{i=1}^6 k_i!}
@@ -206,11 +284,11 @@ And the entropy then reads:
      S = - k_B T ln \left( \frac{N!}{\prod_{i=1}^6 k_i!} \right)
 \end{equation}
 
-I have never seen this contribution taken into account anywhere. In the fully condensed phase maybe we can neglect it. But whene the DNA is less than 78\% condensed, the disorder might play an important role.
+I have never seen this contribution taken into account anywhere. In the fully condensed phase maybe we can neglect it. But when the DNA is less than 78\% condensed, the disorder might play an important role.
 
 \textbf{It would be great to understand why is it ignored in th papper we have reard ?}
 
-\section{Simple model of viral DNA packing}
+
 
 
 \printbibliography[
