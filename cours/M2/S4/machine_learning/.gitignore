@@ -2,4 +2,5 @@
 !**/
 !**/*.pdf
 !**/*.ipynb
+!**/*.png
 **/.ipynb_checkpoints
