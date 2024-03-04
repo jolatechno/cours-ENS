@@ -1,6 +1,8 @@
 */**
 !**/
-!**/*.pdf
 !**/*.ipynb
+!**/*.pdf
 !**/*.png
+!**/*.tex
+!**/*.bib
 **/.ipynb_checkpoints
